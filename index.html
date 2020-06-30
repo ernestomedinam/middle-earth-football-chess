@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Middle Earth Football Chess</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <h1>Hello class</h1>
+    <!-- field -->
+    <section class="field field-line">
+        <!-- players -->
+        <div class="player a gk human"></div>
+        <div class="player a def lw orc"></div>
+        <div class="player a def rw orc"></div>
+        <div class="player a mid wizard"></div>
+        <div class="player a fw rc elf"></div>
+        <div class="player b gk wizard"></div>
+        <div class="player b def lc human"></div>
+        <div class="player b def rc orc"></div>
+        <div class="player b mid rw elf"></div>
+        <div class="player b mid lw orc"></div>
+        <div class="player ref gollum"></div>
+        <!-- field lines -->
+        <div class="a-goal">
+            <div id="a-mid-circle" class="field-line"></div>
+        </div>
+        <div class="field-line a-goal"></div>
+        <div id="mid-circle" class="field-line"></div>
+        <div id="mid-field" class="field-line"></div>
+        <div class="b-goal">
+            <div id="b-mid-circle" class="field-line"></div>
+        </div>
+        <div class="field-line b-goal"></div>
+    </section>
+    <!-- bench -->
+    <section class="bench">
+        <!-- substitutes -->
+        <div class="player a elf"></div>
+        <div class="player a human"></div>
+        <div class="player a dwarf"></div>
+        <div class="player b dwarf"></div>
+        <div class="player b dwarf"></div>
+        <div class="player b wizard"></div>
+    </section>
 </body>
 </html>

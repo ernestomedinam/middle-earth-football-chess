@@ -1,0 +1,205 @@
+/* start all elements with 0 margin/padding and set box-sizing to border-box */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body is full window height and sets space between field and bench */
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem 2rem;
+    height: 100vh;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+/* both sections have border and behave like flex rows at first */
+section {
+    position:relative;
+    border: solid 3px black;
+    width: 75rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+/* all players are circles with fixed size */
+.player {
+    height: 4rem;
+    width: 4rem;
+    border: 5px solid darkgray;
+    border-radius: 2rem;
+    margin: 1rem;
+    z-index: 10000;
+}
+/* field is green and has zones or specific areas */
+.field {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-flow: column;
+    justify-items: center;
+    background-color: darkgreen;
+}
+/* teams */
+.a {
+    background-color: lightblue;
+    border-color: lightblue;
+}
+.b {
+    background-color: orange;
+    border-color: orange;
+}
+/* goalkeepers */
+.a.gk {
+    grid-column: 1;
+    grid-row: 4;
+}
+.b.gk {
+    grid-column: 7;
+    grid-row: 4;
+}
+/* defenders */
+.a.def {
+    grid-column: 2;
+    grid-row: 4;
+}
+.b.def {
+    grid-column: 6;
+    grid-row: 4;
+}
+/* midfielders */
+.a.mid {
+    grid-column: 3;
+    grid-row: 4;
+}
+.b.mid {
+    grid-column: 5;
+    grid-row: 4;
+}
+/* forwards */
+.a.fw, .b.fw {
+    grid-column: 4;
+    grid-row: 4;
+}
+/* positions */
+.def.lw, .mid.lw {
+    grid-row: 2;
+}
+.def.rw, .mid.rw {
+    grid-row: 6;
+}
+.def.lc, .mid.lc {
+    grid-row: 3;
+}
+.def.rc, .mid.rc {
+    grid-row: 5;
+}
+/* referee */
+.ref {
+    border-color: black;
+    background-color: black;
+    grid-column: 4;
+    grid-row: 1;
+}
+.bench {
+    background-color: gray;
+    justify-content: space-between;
+}
+/* charachters */
+.orc {
+    background-image: url("./img/orc.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.elf {
+    background-image: url("./img/elf.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.wizard {
+    background-image: url("./img/wizard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.dwarf {
+    background-image: url("./img/dwarf.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.human {
+    background-image: url("./img/human.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.gollum {
+    background-image: url("./img/gollum.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+/* field lines */
+.field-line {
+    border: 10px solid lightblue;
+}
+.a-goal {
+    height: 50%;
+    width: 15%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: green;
+    border-left: none;
+}
+#a-mid-circle {
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    transform: translate(50%, 50%);
+    background-color: green;
+}
+#mid-field {
+    border: 5px solid lightblue;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: calc(50% - 2.5px);
+}
+#mid-circle {
+    position: absolute;
+    height: 50%;
+    width: 30%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+}
+.b-goal {
+    height: 50%;
+    width: 15%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: green;
+    border-right: none;
+}
+#b-mid-circle {
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    transform: translate(-50%, 50%);
+    background-color: green;
+}
