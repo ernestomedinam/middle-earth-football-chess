@@ -1,26 +1,27 @@
-# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) HTML Hello
+# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) HTML + CSS middle earth football chess!
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git)
-
-The most basic boilerplate for any 4Geeks Academy Student using the [gitpod.io](gitpod.io) coding editor.
-
-[![How to open html/css preview of my project in gitpod](https://ucarecdn.com/573d0bef-9c8c-48dd-a6ef-401972dff96d/)](https://youtu.be/dfbDCMu_p-0)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/ernestomedinam/middle-earth-football-chess.git)
 
 ## What to do next?
 
-Create a `index.html` file with the [basic HTML structure](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) and see it live by running web-server using the following command:
+The fist time you start your workspace run this command on the terminal to install Flask!
 
 ```sh
-$ pip3 install flask && python3 server.py
+$ pip3 install flask
 ```
 
-- You can create as many HTML files you want
-- You can also create CSS files and you can import them onto your website using a `<link>` tag placed between the `<head></head>` tags, like this:
+Now you can work on your files and launch the server to see what it looks like either on the preview or in a new tab!
 
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
+```sh
+$ python3 server.py
 ```
+
+## What to build?
+
+Build field, bench and players, so that your game looks like this: [middle earth football chess](http://tinyurl.com/yb8f7kel)
+
+### Hints
+- Build two sections, one for the field and one for the bench
+- All players and lines could be divs
+- Have the bench be a flexbox and the field be a 7x7 grid
+- Use images on img folder as background images for the players according to their specie
